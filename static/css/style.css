@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.player-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.current-song-info {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #3498db;
+}
+
+#audio-player {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #2980b9;
+}
+
+.controls button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.volume-control {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume-control label {
+    margin-right: 10px;
+}
+
+#volume-slider {
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+#playlist {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#playlist li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#playlist li:last-child {
+    border-bottom: none;
+}
+
+#playlist li:hover {
+    background-color: #ecf0f1;
+}
+
+#playlist li.active {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+.no-songs-message {
+    padding: 15px;
+    color: #7f8c8d;
+    text-align: center;
+}
