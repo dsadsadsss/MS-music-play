@@ -1,1 +1,38 @@
-1
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS音乐播放器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="player-container">
+        <h1>MS音乐播放器</h1>
+
+        <div class="current-song-info">
+            正在播放: <span id="current-song-title">---</span>
+        </div>
+
+        <audio id="audio-player" controls></audio>
+
+        <div class="controls">
+            <button id="prev-btn">上一首</button>
+            <button id="play-pause-btn">播放</button>
+            <button id="next-btn">下一首</button>
+        </div>
+        
+        <div class="volume-control">
+            <label for="volume-slider">音量:</label>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+        </div>
+
+        <h2>播放列表</h2>
+        <ul id="playlist">
+            <li class="no-songs-message">正在加载歌曲... 如果长时间未显示，请检查 static/music 文件夹中是否有音乐文件。</li>
+        </ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
